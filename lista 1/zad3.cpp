@@ -1,41 +1,23 @@
-#include<iostream>
-#include<cstdlib>
-using namespace std;
+#include <iostream>
 
-int oblicz(double a[],int n, double x)
+double oblicz(double a[], int n, double x)
 {
-    int wynik = a[0];
+    double result = 0;
 
-    for(int i=1;i<=n;i++)
-        wynik = wynik*x + a[i];
+    for(int i = n; i > 0; --i)
+    {
+        result = (a[i] + result) * x;
+    }
 
-    return wynik;
+    return result + a[0];
 }
+
 
 int main()
 {
-    double *wspolczynniki;
-    int stopien;
-    double x;
+    int n = 3;
+    double x = 10;
+    double a [n] = {5, 5, 3};
 
-    cout<<"Podaj stopień wielomianu: ";
-    cin>>stopien;
-
-    wspolczynniki = new double [stopien+1];
-
-    //wwspółczynniki
-    for(int i=0;i<=stopien;i++)
-    {
-        cout<<"Podaj współczynnik stojący przy potędze "<<stopien-i<<": ";
-        cin>>wspolczynniki[i];
-    }
-
-    cout<<"Podaj x: ";
-    cin>>x;
-
-    cout<<"W( "<<x<<" ) = "<< oblicz(wspolczynniki,stopien,x)<<endl;
-
-
-
-    return 0;
+    std::cout << oblicz(a, n, x) << std::endl;
 }
