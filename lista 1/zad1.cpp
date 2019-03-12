@@ -35,13 +35,3 @@ int potegaIt(int x, int n)
 	}
 	return wynik;
 }
-
-// int main() {
-	// int res1 = potegaIt(2, 10);
-	// int res2 = potegaIt(2, 10);
-
-	// std::cout << res1 << std::endl;
-	// std::cout << res2 << std::endl;
-	
-	// getchar();
-// }
