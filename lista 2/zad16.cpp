@@ -49,7 +49,7 @@ public:
 		return currentNode;
 	}
 
-	bool operator != (const iterator& it) // kontynłuacji pentli , const zeby się nie modyfikował 
+	bool operator != (const iterator& it) // kontynuacji pentli , const zeby się nie modyfikował 
 	{
 		return currentNode != it.currentNode; // sprawdza czy nasz currnode nie jest rowny otrzymanemu currentnodowi danego obiektu.
 	}
