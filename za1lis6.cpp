@@ -1,11 +1,9 @@
-  unsigned long
-    hash(unsigned char *str)
-    {
-        unsigned long hash = 5381;
-        int c;
+  unsigned int h(string s)
+{
+  unsigned int h,i;
 
-        while (c = *str++)
-            hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-
-        return hash;
-    }
+  h = 0;
+  for(i = 0; i < s.length(); i++)
+    h = h + s[i];
+  return h % 10;
+}
