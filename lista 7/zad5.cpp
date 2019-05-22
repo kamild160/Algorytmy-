@@ -23,7 +23,7 @@ class UnionFind
                 int a = find(i);    // przypisujemy pod 'a' pierwszego reprezentatna 
                 int b = find(j);    // przypisujemy pod 'b' drugiego reprezentatna 
                 if(a!=b)            // jesli reprezentanci są różni. 
-                    if(m_rank[a] < m_rank[b])   // jeśli ranga reprezentanta a jest wieksza od rangi rep. b
+                    if(m_rank[a] < m_rank[b])   // jeśli ranga reprezentanta a jest mniejsza od rangi rep. b
                         m_parent[a] = b;        // łączymy wyspę a do wyspy b
                     else if(m_rank[b] < m_rank[a])
                         m_parent[b] = a;
