@@ -4,7 +4,8 @@ int countIslands(int n, const bool a[][5])
         for(int i = 0; i < n; ++i) // pętla dla kolumn
             for(int j = 0; j < n; ++j) // pętla dla wierszy.
             {
-                if(!a[i][j]) // jeli nie ma takiego elementu. // if-y sprawdzają czy w obrębie 1 są inne jedynki jesli tak scala je w wyspę.
+                if(!a[i][j]) // jeli nie ma takiego elementu. // if-y sprawdzają czy w obrębie 1 są inne jedynki jesli tak 
+                    //scala je w wyspę.
                     continue;
                 if(i+1 < n && a[i+1][j])
                     obj.make_union(i*n+j,(i+1)*n+j);
