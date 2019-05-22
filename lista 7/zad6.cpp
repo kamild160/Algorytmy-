@@ -17,7 +17,7 @@
             }
 
         for(int i = 0; i < n; ++i)
-            if(t[i][0]) // jeśli istnieje taki el
+            if(t[i][0]) // jeśli istnieje taki element
                 for(int j = 0; j < n; ++j) // pętla po wierszach
                     if(t[j][n-1]) // jesli istenie taki element
                         if(obj.find(i*(n-1)) == obj.find(j*(n-1)+(n-1))) // sprawdza czy ścieżka istnieje jesli tak zwraca 1 (jeśli poczatkowy punkt ma tego samego reprezentanta co końcowy to zwróc 1 )
