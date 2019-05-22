@@ -8,11 +8,11 @@
                 if(t[i][j]) // jesli pole istnieje 
                 {
                     if(i+1 < n && t[i+1][j]) //down //  if-y sprawdzają czy w obrębie 1 są inne jedynki jesli tak scala je w wyspę.
-                        obj.make_union(i*n+j,(i+1)*n+j);
+                        obj.union(i*n+j,(i+1)*n+j);
                     if(i-1 >= 0 && t[i-1][j]) //up
-                        obj.make_union(i*n+j,(i-1)*n+j);
+                        obj.union(i*n+j,(i-1)*n+j);
                     if(j+1 < n && t[i][j+1]) //right
-                        obj.make_union(i*n+j,i*n+j+1);
+                        obj.union(i*n+j,i*n+j+1);
                  }
             }
 
